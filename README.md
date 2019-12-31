@@ -16,6 +16,7 @@ sudo bash -c 'echo "actionsfile whitelist.action" >> /etc/privoxy/config'
 如果出现以下错误，意味着你需要fq下载
 
 ```
-网络错误
-该死的gfw...( ＿ ＿)ノ｜
+网络错误...( ＿ ＿)ノ｜
+gfw不应许你这么做
+m(=•ェ•=)m
 ```
