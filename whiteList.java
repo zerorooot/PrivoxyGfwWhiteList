@@ -29,13 +29,13 @@ public class whiteList {
         HttpsURLConnection httpsURLConnection = (HttpsURLConnection) url.openConnection();
         httpsURLConnection.setRequestProperty("Cache-Control", "no-cache");
         httpsURLConnection.setRequestProperty("Charset", "UTF-8");
-        httpsURLConnection.setConnectTimeout(2000);
+        httpsURLConnection.setConnectTimeout(3000);
 
         //下载
         try {
             httpsURLConnection.connect();
         } catch (Exception e) {
-            System.out.println("网络错误\n该死的gfw...( ＿ ＿)ノ｜");
+            System.out.println("网络错误...( ＿ ＿)ノ｜\ngfw不应许你这么做\nm(=•ェ•=)m");
             return;
         }
         
@@ -43,7 +43,7 @@ public class whiteList {
         InputStream inputStream = httpsURLConnection.getInputStream();
         InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        
+
         //替换
         String line;
         StringBuffer stringBuffer = new StringBuffer(head);
@@ -60,6 +60,7 @@ public class whiteList {
         BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
         bufferedWriter.write(stringBuffer.toString());
         bufferedWriter.close();
+        System.out.println("安装成功\nd=====(￣▽￣*)b");
         
         //重启privoxy
         String restart = " systemctl restart privoxy.service ";
@@ -68,8 +69,8 @@ public class whiteList {
         } catch (Exception e) {
             System.out.println("重启privoxy失败，可能是权限不够或者没安装造成的\n(；′⌒`)");
         }
-        
-        
-        System.out.println("安装成功\nd=====(￣▽￣*)b");
+
+
+        System.out.println("重启privoxy成功\n(≧∇≦)ﾉ");
     }
 }
