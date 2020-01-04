@@ -59,12 +59,17 @@ public class whiteList {
         httpsURLConnection.disconnect();
 
         //写入
+        try {
         FileOutputStream fileOutputStream = new FileOutputStream(filePath);
         OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream);
         BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
         bufferedWriter.write(stringBuffer.toString());
         bufferedWriter.close();
         System.out.println("安装成功\nd=====(￣▽￣*)b");
+        } catch (Exception e) {
+            System.out.println("权限不够>﹏<\n试试 sudo java whiteList.java 127.0.0.1:1080");
+            return;
+        }
 
         //重启privoxy
         String restart = " systemctl restart privoxy.service ";
