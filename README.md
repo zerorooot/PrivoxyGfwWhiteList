@@ -12,11 +12,3 @@ sudo java whiteList.java 127.0.0.1:1080
 
 sudo bash -c 'echo "actionsfile whitelist.action" >> /etc/privoxy/config'
 ```
-
-如果出现以下错误，意味着你需要fq下载
-
-```
-网络错误...( ＿ ＿)ノ｜
-gfw不应许你这么做
-m(=•ェ•=)m
-```
