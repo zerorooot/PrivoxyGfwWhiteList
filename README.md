@@ -8,7 +8,8 @@ git clone https://github.com/zerorooot/PrivoxyGfwWhiteList.git
 
 cd PrivoxyGfwWhiteList
 
+sudo bash -c 'echo "actionsfile whitelist.action" >> /etc/privoxy/config'
+
 sudo java whiteList.java 127.0.0.1:1080
 
-sudo bash -c 'echo "actionsfile whitelist.action" >> /etc/privoxy/config'
 ```
