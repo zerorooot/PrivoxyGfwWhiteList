@@ -46,7 +46,7 @@ public class whiteList {
         String line;
         StringBuilder stringBuffer = new StringBuilder();
         while ((line = bufferedReader.readLine()) != null) {
-            line = line.replace("server=/", ".").replace("/114.114.114.114", ".");
+            line = line.replace("server=/", ".").replace("/114.114.114.114", "");
             stringBuffer.append(line).append("\n");
         }
         bufferedReader.close();
