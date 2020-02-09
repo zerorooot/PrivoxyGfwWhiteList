@@ -6,4 +6,8 @@ direct = +forward-override{forward .}
 {socks5}
 /
 {direct}
+.t.cn
+192.168.*.*
+.sourceforge.net
 @whiteList
+
