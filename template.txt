@@ -6,7 +6,6 @@ direct = +forward-override{forward .}
 {socks5}
 /
 {direct}
-.sourceforge.net
 localhost
 127.*
 10.*
