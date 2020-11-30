@@ -19,7 +19,7 @@ public class whiteList {
 
         String time = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
         String addr = args[0];
-        String filePath = "whitelist.action";
+        String filePath = "/etc/privoxy/whitelist.action";
         String urlName = "https://raw.githubusercontent.com/felixonmars/dnsmasq-china-list/master/accelerated-domains.china.conf";
         String head = new String(new FileInputStream(new File("template.txt")).readAllBytes());
 
